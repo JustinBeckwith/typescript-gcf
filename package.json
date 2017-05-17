@@ -1,0 +1,20 @@
+{
+  "name": "typescript-demo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "functions start && tsc --watch",
+    "deploy.sayHello": "functions deploy sayHello --trigger-http",
+    "deploy.onPubsub": "functions deploy onPubsub --trigger-topic messages"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-emulator": "^1.0.0-alpha.19",
+    "@types/express": "^4.0.35",
+    "@types/node": "^7.0.18",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "@google-cloud/pubsub": "^0.12.0"
+  }
+}
